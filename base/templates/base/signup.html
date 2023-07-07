@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="container">
+  <h2>LAGE</h2>
+
+  <!-- Rest of the code -->
+
+  <div class="form-container">
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Anmelden">
+    </form>
+  </div>
+</div>
+  
+  {% endblock content %}

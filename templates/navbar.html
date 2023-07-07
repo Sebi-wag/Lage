@@ -1,0 +1,17 @@
+{% load %}
+
+<div class="navbar">
+    {% if request.user.is_authenticated %}
+    <div>
+        <p class="user-email">{{ request.user.email }}</p>
+    </div>
+
+    <div>
+        <a class="logout-link" href="{% url 'logout' %}">Ausloggen</a>
+    </div>
+        
+    {% else %}
+        <p class="placeholder-text">LAAAGE???</p>
+    {% endif %}
+</div>
+<hr>
